@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>CAP Prod</title>
+    <title>CAP</title>
 
     <link rel="stylesheet" href="stylesheets/app.css" />
 
@@ -15,35 +15,109 @@
 </head>
 <body>
 
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="#">CAP Prod</a></h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <section class="top-bar-section">
-            <ul class="left">
-                <li class="divider"></li>
-                <li class="active"><a href="#">Créations CAP</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Accompagnement & Diffusion</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Artistes</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Agenda</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Contact</a></li>
-                <li class="divider"></li>
+    <div class="contain-to-grid sticky">
+        <nav class="top-bar">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="/">CAP</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
-        </section>
-    </nav>
 
-    <section class="panel">
-        <h2>CAP Prod</h2>
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li class="divider"></li>
+                    <li class="active"><a href="#creations">Créations CAP</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#accompagnement">Accompagnement & Diffusion</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#artistes">Artistes</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="divider"></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <section id="creations "class="panel panel-creations">
+        <div class="row">
+            <h2>Créations CAP</h2>
+            <p>Tout au long de l'année l'association propose un panel d'évènements artistiques et culturels.</p>
+        </div>
+        <div class="row">
+            <div class="large-6 small-12">
+                <div class="row collapse">
+                    <div class="small-4 small-offset-4 columns">
+                        <a class="right" href="#">En savoir plus</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#contact" class="button small round right">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <section id="accompagnement" class="panel panel-accompagnement">
+        <div class="row">
+            <h2>Accompagnement & Diffusion</h2>
+            <p>Tu as un projet artistique, culturel, solidaire ou autre ? Besoin d'un coup de pouce ?</p>
+        </div>
+        <div class="row">
+            <div class="small-12 large-6">
+                <div class="row collapse">
+                    <div class="small-4 small-offset-4 columns">
+                        <a class="right" href="#">En savoir plus</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#contact" class="button small round right">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artistes" class="panel panel-artistes">
+        <div class="row">
+            <h2>Le coin des artistes</h2>
+            <p>Découvrez notre réseau d'artistes.</p>
+        </div>
+        <div class="row">
+            <form class="small-12 large-6" action="#recherche_artiste">
+
+                <div class="row collapse">
+                    <div class="small-8 columns">
+                        <input id="search-artist" type="search" placeholder="Cherchez un artiste">
+                    </div>
+                    <div class="small-4 columns">
+                        <button class="button postfix round">Chercher</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="panel panel-contact">
+        <div class="row collapse">
+            <div class="small-12">
+                <h2>Contactez-nous</h2>
+                <p>Pour vous informer, pour vous conseiller, pour nous rejoindre ou nous encourager : exprimez-vous !</p>
+            </div>
+            <div class="small-12 large-6">
+                <form name="contact" action="#contact">
+                    <label for="contact-name">Votre nom</label>
+                    <input type="text" name="contact-name" id="contact-name">
+                    <label for="contact-email">Votre email</label>
+                    <input type="email" name="contact-email" id="contact-email">
+                    <label for="contact-message">Votre message</label>
+                    <textarea name="contact-message" id="contact-message">
+                    </textarea>
+                    <button type="submit" class="round right">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <script>
     document.write('<script src=' +

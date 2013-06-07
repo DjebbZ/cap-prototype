@@ -1,0 +1,48 @@
+//
+// CAP Variables
+//
+
+// Colors
+
+$cap-green: #a2d7bd;
+$cap-orange: lighten(#fcbd9c, 20%);
+$cap-argentum: #c2c3c5;
+$cap-breath: #deefe5;
+$cap-grey: #828991;
+$cap-light-grey: lighten(#00f, 50%);
+
+
+//
+// Foundation overrides
+//
+
+$form-label-font-size: emCalc(40px);
+
+.panel {
+    border: 0;
+    border-bottom: 1px solid $cap-grey;
+    margin-bottom: 0;
+}
+
+
+
+//
+// CAP custom styles
+//
+
+
+.panel-creations {
+    background-color: $panel-bg;
+}
+
+.panel-accompagnement {
+    background-color: $cap-breath;
+}
+
+.panel-artistes {
+    background-color: $cap-light-grey;
+}
+
+.panel-contact {
+    background-color: $cap-orange;
+}

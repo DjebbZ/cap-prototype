@@ -4,7 +4,7 @@
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
-$base-font-size: 100% !default;
+$base-font-size: 18px;
 
 // $base-line-height is 24px while $base-font-size is 16px
 // $base-line-height: 150%;
@@ -14,7 +14,7 @@ $base-font-size: 100% !default;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be a different size and not have it effect grid size too,
 // set the value of $em-base to $base-font-size ($em-base: $base-font-size;)
-$em-base: 16px !default;
+$em-base: $base-font-size;
 
 // Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
 @function emCalc($pxWidth) {
@@ -30,7 +30,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Verdana, serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -136,19 +136,19 @@ $default-float: left;
 
 // Heading font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: Verdana, serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
-// $header-bottom-margin: .5em;
+$header-bottom-margin: 0.8em;
 // $header-text-rendering: optimizeLegibility;
 
 // Heading font sizes
 
 // $h1-font-size: emCalc(44px);
-// $h2-font-size: emCalc(37px);
+$h2-font-size: emCalc(50px);
 // $h3-font-size: emCalc(27px);
 // $h4-font-size: emCalc(23px);
 // $h5-font-size: emCalc(18px);
@@ -259,13 +259,13 @@ $default-float: left;
 // Labels
 
 // $form-label-pointer: pointer;
-// $form-label-font-size: emCalc(14px);
+$form-label-font-size: emCalc($base-font-size - 2);
 // $form-label-font-weight: 500;
 // $form-label-font-color: lighten(#000, 30%);
-// $form-label-bottom-margin: emCalc(3px);
+$form-label-bottom-margin: emCalc(6px);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: emCalc(14px);
+$input-font-size: emCalc($base-font-size);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: darken(#fff, 2%);
 // $input-border-color: darken(#fff, 20%);
@@ -850,8 +850,8 @@ $default-float: left;
 
 // Background and border styles
 
-// $panel-bg: darken(#fff, 5%);
-// $panel-border-style: solid;
+$panel-bg: #fff;
+$panel-border-style: none;
 // $panel-border-size: 1px;
 
 // Control how much we darken things on hover
@@ -861,8 +861,8 @@ $default-float: left;
 
 // Inner padding and bottom margin
 
-// $panel-margin-bottom: emCalc(20px);
-// $panel-padding: emCalc(20px);
+$panel-margin-bottom: 0;
+$panel-padding: emCalc(90px);
 
 // Font colors
 
@@ -1202,7 +1202,7 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg:                            #111 !default;
+$topbar-bg:                            #fff;
 
 // Height and margin
 
@@ -1218,25 +1218,25 @@ $topbar-margin-bottom:                 0;
 // $topbar-title-weight:                  bold;
 // $topbar-title-font-size:               emCalc(17px);
 
-// Style the top bar dropdown elements
-
-// $topbar-dropdown-bg:                   #222;
-// $topbar-dropdown-link-color:           #fff;
-// $topbar-dropdown-link-bg:              lighten($topbar-bg, 5%);
-// $topbar-dropdown-toggle-size:          5px;
-// $topbar-dropdown-toggle-color:         #fff;
-// $topbar-dropdown-toggle-alpha:         0.5;
-
 // Set the link colors and styles for top-level nav
 
-// $topbar-link-color:                    #fff;
-// $topbar-link-color-hover:              #fff;
-// $topbar-link-color-active:             #fff;
+$topbar-link-color:                    lighten(#000, 30%);
+$topbar-link-color-hover:              #000;
+$topbar-link-color-active:             lighten(#000, 10);
 // $topbar-link-weight:                   bold;
 // $topbar-link-font-size:                emCalc(13px);
 // $topbar-link-hover-lightness:          -30%; // Darken by 30%
 // $topbar-link-bg-hover:                 darken($topbar-bg, 3%);
 // $topbar-link-bg-active:                darken($topbar-bg, 3%);
+
+// Style the top bar dropdown elements
+
+$topbar-dropdown-bg:                   $topbar-bg;
+$topbar-dropdown-link-color:           $topbar-link-color;
+// $topbar-dropdown-link-bg:              lighten($topbar-bg, 5%);
+// $topbar-dropdown-toggle-size:          5px;
+// $topbar-dropdown-toggle-color:         #fff;
+// $topbar-dropdown-toggle-alpha:         0.5;
 
 // $topbar-dropdown-label-color:          #555;
 // $topbar-dropdown-label-text-transform: uppercase;
@@ -1248,10 +1248,10 @@ $topbar-margin-bottom:                 0;
 // $topbar-menu-link-transform:           uppercase;
 // $topbar-menu-link-font-size:           emCalc(13px);
 // $topbar-menu-link-weight:              bold;
-// $topbar-menu-link-color:               #fff;
-// $topbar-menu-icon-color:               #fff;
-// $topbar-menu-link-color-toggled:       #888;
-// $topbar-menu-icon-color-toggled:       #888;
+$topbar-menu-link-color:               #888;
+$topbar-menu-icon-color:               #888;
+$topbar-menu-link-color-toggled:       #000;
+$topbar-menu-icon-color-toggled:       #000;
 
 // Transitions and breakpoint styles
 

@@ -19,7 +19,7 @@
         <nav class="top-bar">
             <ul class="title-area">
                 <li class="name">
-                    <h1><a href="/">CAP</a></h1>
+                    <a href="/"><img src="images/logo_small.png" alt="CAP"></a>
                 </li>
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
@@ -40,19 +40,23 @@
         </nav>
     </div>
 
-    <section id="creations "class="panel panel-creations">
+    <section id="cap" class="panel panel-cap">
+        <img src="images/logo_big.png" alt="CAP - Création Artistique et Philanthropie" width="280" height="215">
+    </section>
+
+    <section id="creations"class="panel panel-creations">
         <div class="row">
             <h2>Créations CAP</h2>
-            <p>Tout au long de l'année l'association propose un panel d'évènements artistiques et culturels.</p>
+            <p class="subline">Tout au long de l'année l'association propose un panel d'évènements artistiques et culturels.</p>
         </div>
         <div class="row">
-            <div class="large-6 small-12">
+            <div class="small-12 large-8">
                 <div class="row collapse">
-                    <div class="small-4 small-offset-4 columns">
-                        <a class="right" href="#">En savoir plus</a>
+                    <div class="small-6 columns">
+                        <a class="right" href="#">Voir les créations</a>
                     </div>
-                    <div class="small-4 columns">
-                        <a href="#contact" class="button small round right">Contact</a>
+                    <div class="small-6 columns">
+                        <a href="#contact" class="button round right">Créez avec CAP</a>
                     </div>
                 </div>
             </div>
@@ -62,16 +66,16 @@
     <section id="accompagnement" class="panel panel-accompagnement">
         <div class="row">
             <h2>Accompagnement & Diffusion</h2>
-            <p>Tu as un projet artistique, culturel, solidaire ou autre ? Besoin d'un coup de pouce ?</p>
+            <p class="subline">Tu as un projet artistique, culturel, solidaire ou autre ? Besoin d'un coup de pouce ?</p>
         </div>
         <div class="row">
-            <div class="small-12 large-6">
+            <div class="small-12 large-8">
                 <div class="row collapse">
-                    <div class="small-4 small-offset-4 columns">
+                    <div class="small-6 columns">
                         <a class="right" href="#">En savoir plus</a>
                     </div>
-                    <div class="small-4 columns">
-                        <a href="#contact" class="button small round right">Contact</a>
+                    <div class="small-6 columns">
+                        <a href="#contact" class="button round right">Demandez conseil</a>
                     </div>
                 </div>
             </div>
@@ -81,17 +85,30 @@
     <section id="artistes" class="panel panel-artistes">
         <div class="row">
             <h2>Le coin des artistes</h2>
-            <p>Découvrez notre réseau d'artistes.</p>
+            <p class="subline">Découvrez notre réseau d'artistes.</p>
         </div>
         <div class="row">
-            <form class="small-12 large-6" action="#recherche_artiste">
-
+            <div class="small-12">
+                <ul class="large-block-grid-2">
+                    <li><img src="images/artistes/sally.jpg" width="266" height="266" alt="Sally"></li>
+                    <li><img src="images/artistes/alec_bokaz.jpg" width="266" height="266" alt="Alec - Bokaz Crew"></li>
+                </ul>
+            </div>
+            <div class="row collapse">
+                <p>
+                    <a href="#artistes">Plus d'artistes</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <form class="small-12" action="artistes">
                 <div class="row collapse">
-                    <div class="small-8 columns">
-                        <input id="search-artist" type="search" placeholder="Cherchez un artiste">
+                    <div class="small-12 large-8">
+                        <label for="search-artist">Chercher un artiste</label>
+                        <input id="search-artist" type="search" placeholder="Ex: Bokaz Crew, Arthur">
                     </div>
-                    <div class="small-4 columns">
-                        <button class="button postfix round">Chercher</a>
+                    <div class="small-4">
+                        <button class="button round">Chercher</a>
                     </div>
                 </div>
             </form>
@@ -102,9 +119,9 @@
         <div class="row collapse">
             <div class="small-12">
                 <h2>Contactez-nous</h2>
-                <p>Pour vous informer, pour vous conseiller, pour nous rejoindre ou nous encourager : exprimez-vous !</p>
+                <p class="subline">Pour vous informer, pour vous conseiller, pour nous rejoindre ou nous encourager : exprimez-vous !</p>
             </div>
-            <div class="small-12 large-6">
+            <div class="small-12 large-8">
                 <form name="contact" action="#contact">
                     <label for="contact-name">Votre nom</label>
                     <input type="text" name="contact-name" id="contact-name">
@@ -113,7 +130,7 @@
                     <label for="contact-message">Votre message</label>
                     <textarea name="contact-message" id="contact-message">
                     </textarea>
-                    <button type="submit" class="round right">Envoyer</button>
+                    <button type="submit" class="round">Envoyer</button>
                 </form>
             </div>
         </div>
